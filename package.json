@@ -10,7 +10,9 @@
     "build": "parcel build website/index.html -d docs/ --public-url ./",
     "lint": "eslint --fix --ext js .",
     "formatQuestions": "prettier-eslint --write \"questions/*.md\" --log-level \"info\"",
-    "format": "prettier-eslint --write \"scripts/*.js\" && prettier-eslint --write \"website/**/*.js\""
+    "format": "prettier-eslint --write \"scripts/*.js\" && prettier-eslint --write \"website/**/*.js\"",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -32,9 +34,10 @@
     "markdown-builder": "^0.9.0",
     "marked": "^0.7.0",
     "modern-normalize": "^0.5.0",
-    "npm": "^6.11.2",
+    "npm": "^7.21.0",
     "prettier-eslint": "^9.0.0",
-    "prismjs": "^1.17.1"
+    "prismjs": "^1.17.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -47,5 +50,6 @@
     "node-sass": "^4.12.0",
     "parcel-bundler": "^1.12.3",
     "prettier-eslint-cli": "^5.0.0"
-  }
+  },
+  "snyk": true
 }
